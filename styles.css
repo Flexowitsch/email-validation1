@@ -1,0 +1,271 @@
+body {
+    margin: 0;
+    font-family: 'Josefin Sans', sans-serif;
+}
+
+:root {
+    --gradient: linear-gradient(135deg, #F8BFBF 0%, #EE8B8B 100%);
+    --brown: #423A3A;
+    --light-brown: #CE9898;
+    --coral: #EE8B8B;
+    --white: #fff;
+    --red: #F96464;
+    --skin: rgba(255, 255, 255, 0.50);
+}
+
+.container {
+    width: 100%;
+    height: 100vh;
+    display: flex;
+}
+
+@media(max-width: 390px) {
+    .container {
+        flex-direction: column;
+    }
+}
+
+/* put images in containers */
+
+.img-container-mobile {
+    background-image: url(./images/hero-mobile.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+/*
+.img-container {
+    background-image: url(./images/hero-desktop.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    width: 33%; 
+}
+*/
+
+@media(max-width: 390px) {
+    .img-container {
+        display: none;
+    }
+}
+
+.img-container img {
+    height: 100%;
+}
+
+
+
+.text-container {
+    background-image: url(./images/bg-pattern-desktop.svg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    padding: 4rem 10rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+@media(max-width: 390px) {
+    .text-container {
+        padding: 0;
+    }
+}
+
+.logo {
+    width: 9.875rem;
+    height: 2.0625rem;
+    flex-shrink: 0;
+}
+
+@media(max-width: 390px) {
+    .logo {
+        width: 6.25rem;
+        height: 1.30538rem;
+        flex-shrink: 0;
+        margin: 2rem;
+    }
+}
+
+.mobile-image {
+    display: none;
+}
+
+@media(max-width: 390px) {
+    .mobile-image {
+        display: block;
+        width: 100%;
+    }
+}
+
+@media(max-width: 390px) {
+
+    .subline,
+    .custom-input {
+        margin: 0 2rem;
+    }
+
+    .subline {
+        margin-bottom: 2rem;
+    }
+}
+
+
+
+
+
+/* Typo */
+
+h1 {
+    color: var(--brown);
+    font-size: 4rem;
+    font-style: normal;
+    font-weight: 600;
+    line-height: 4.4375rem;
+    /* 110.938% */
+    letter-spacing: 1.08256rem;
+}
+
+@media(max-width: 390px) {
+    h1 {
+        font-size: 2.5rem;
+        text-align: center;
+        line-height: 2.625rem;
+    }
+}
+
+h1 span {
+    color: var(--light-brown);
+    font-size: 4rem;
+    font-style: normal;
+    font-weight: 300;
+    line-height: 4rem;
+    /* 100% */
+    letter-spacing: 1.08256rem;
+}
+
+@media(max-width: 390px) {
+    h1 span {
+        font-size: 2.5rem;
+        text-align: center;
+        line-height: 2.625rem;
+    }
+}
+
+p.subline {
+    color: var(--light-brown);
+    font-size: 1rem;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 1.75rem;
+    /* 175% */
+}
+
+@media(max-width: 390px) {
+    p.subline {
+
+        font-size: 0.875rem;
+        line-height: 1.375rem;
+        /* 157.143% */
+        text-align: center;
+    }
+}
+
+input[type="email"] {
+    width: 27.8125rem;
+    height: 3.5rem;
+    flex-shrink: 0;
+    padding: 0rem 2rem;
+    color: #CE9898 !important;
+    font-size: 1rem;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 1.75rem;
+    /* 175% */
+    border-radius: 10rem;
+    border: 2px solid #CE9898;
+    opacity: 0.5;
+    flex: 1;
+}
+
+#emailInput {
+    color: var(--coral);
+}
+
+#emailInput::placeholder {
+    color: var(--coral);
+}
+
+
+.custom-input {
+    display: flex;
+    align-items: center;
+    position: relative;
+
+}
+
+
+
+.custom-input button {
+    width: 6.25rem;
+    height: 3.5rem;
+    flex-shrink: 0;
+    width: 100px;
+    position: absolute;
+    right: 0%;
+    height: 60px;
+    border-radius: 28px;
+    background: var(--gradient);
+    border: none;
+    box-shadow: 0px 15px 20px 0px rgba(198, 110, 110, 0.25);
+}
+
+@media(max-width: 390px) {
+    .custom-input button {
+        width: 72px;
+    }
+}
+
+.custom-input button:hover {
+    background: #F4C8C8;
+    box-shadow: 0px 15px 20px 0px rgba(198, 110, 110, 0.25);
+    ;
+}
+
+.custom-input button svg {
+    width: 20px;
+    height: 20px;
+    fill: #fff;
+    /* You can change the icon color as desired */
+}
+
+/* error handling */
+
+#errorIcon {
+    position: absolute;
+    right: 25%;
+    display: none;
+}
+
+.errorInput {
+    outline: none !important;
+    border: 2px solid var(--red) !important;
+}
+
+
+#errorLabel {
+    color: var(--red);
+    font-family: Josefin Sans;
+    font-size: 0.8125rem;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 1.75rem;
+    margin-left: 2rem;
+    display: none;
+    /* 215.385% */
+}
+
+@media(max-width: 390px) {
+    #errorLabel {
+        font-size: 0.8125rem;
+        margin-left: 4.1rem;
+    }
+}
